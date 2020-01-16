@@ -14,7 +14,8 @@
 
                 if($username != "" && $passwd != "") {
                     $sql = "SELECT id FROM login WHERE username='$username' and passwd='$passwd'";
-                    $result = mysqli_query($)
+                    $result = mysqli_query($connection, $sql);
+                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC)
                 }
             }
         ?>
