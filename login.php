@@ -5,7 +5,17 @@
         <title>PHP Practice Login</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <?php 
-            
+            $connection = mysqli_connect("localhost","user1","user1","loginPractice");
+
+            if(isset($_POST['log'])){
+                $username = mysqli_real_escape_string($connect, $_POST['email']);
+                $passwd = mysqli_real_escape_string($connect, $_POST['password']);
+                
+
+                if($username != "" && $passwd != "") {
+                    $sql = 'SELECT id FROM login'
+                }
+            }
         ?>
     </head>
     <body>
